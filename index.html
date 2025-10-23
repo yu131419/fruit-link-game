@@ -1,0 +1,62 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>水果连连看 豪华版</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">🍓 水果连连看 · 豪华版</div>
+      <div class="controls">
+        <input id="nick" placeholder="输入昵称 (示例: 小余)" maxlength="12" />
+        <select id="mode">
+          <option value="timed">限时模式</option>
+          <option value="relax">休闲模式</option>
+        </select>
+        <button id="startBtn" class="btn">开始游戏</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <aside class="side">
+        <div class="panel">
+          <div>关卡: <span id="level">1</span></div>
+          <div>得分: <span id="score">0</span></div>
+          <div>时间: <span id="time">--</span></div>
+        </div>
+
+        <div class="panel tools">
+          <button id="hint" class="btn">提示 🔍</button>
+          <button id="shuffle" class="btn">重排 🔄</button>
+          <button id="freeze" class="btn">冻结时间 🧊</button>
+        </div>
+
+        <div class="panel leaderboard">
+          <h3>本地排行榜</h3>
+          <ol id="boardList"></ol>
+          <button id="clearBoard" class="btn small">清空排行</button>
+        </div>
+      </aside>
+
+      <section class="game-area">
+        <div id="hud" class="hud">连击: <span id="combo">0</span></div>
+        <div id="gridWrap" class="grid-wrap"></div>
+        <canvas id="fxCanvas" class="fx"></canvas>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div>制作：小余 · 主题：可爱卡通风</div>
+      <div class="share">
+        <button id="shareWx" class="btn">分享到微信（复制链接）</button>
+        <button id="shareTg" class="btn">分享到 Telegram</button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
